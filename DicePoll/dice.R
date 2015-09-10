@@ -2,6 +2,7 @@ library(lattice)
 
 ## Import Data Set ##
 dice <- read.csv("dicevalidation.csv")
+custom <- read.csv("Chessex.csv")
 
 ## Survey Results ##
 symbol6 <- 21+57+37
@@ -37,3 +38,8 @@ UrukChi <- chisq.test(table(dice$GWUruk))$p.value
 FortyKMean <- mean(dice$GW40K)
 barplot(table(dice$GW40K),ylim=c(0,200),main="Games Workshop - 40K",xlab="Result",ylab="Rolls")
 FortyKKChi <- chisq.test(table(dice$GW40K))$p.value
+
+# Chessex Dice
+ChessexMean <- mean(custom$Custom)
+barplot(table(custom$Custom),ylim=c(0,200),main="Custom Chessex",xlab="Result",ylab="Rolls")
+ChessexChi <- chisq.test(table(custom$Custom))$p.value

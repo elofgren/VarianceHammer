@@ -2,3 +2,5 @@
 .Rhistory
 
 ETC/.ipynb_checkpoints/ETC-checkpoint.ipynb
+
+.DS_Store
